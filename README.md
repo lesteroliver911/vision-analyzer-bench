@@ -2,7 +2,7 @@
 
 ![Vision Analyzer Demo](https://raw.githubusercontent.com/lesteroliver911/vision-analyzer-bench/main/demo.gif)
 
-A production-ready tool for benchmarking Vision LLMs (Ollama, Groq, Gemini) to accelerate your AI development pipeline.
+A tool for benchmarking Vision LLMs (Ollama, Groq, Gemini) to accelerate your AI development pipeline.
 
 ## Why Use Vision Analyzer Bench?
 
