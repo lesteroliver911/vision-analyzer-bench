@@ -1,0 +1,7 @@
+streamlit
+ollama
+groq
+pillow
+python-dotenv
+pydantic
+google-generativeai 
