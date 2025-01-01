@@ -8,7 +8,6 @@ A tool for benchmarking Vision LLMs (Ollama, Groq, Gemini) to accelerate your AI
 
 - **Fast Integration**: Get vision capabilities in your app within minutes
 - **Cost Optimization**: Compare performance across providers to choose the most cost-effective solution
-- **Production Ready**: Built with Pydantic models and proper error handling
 - **Extensible**: Easy to add new providers or customize analysis parameters
 - **Self-Hosted**: Full control over your data and processing
 
@@ -29,6 +28,36 @@ streamlit run app.py
 | Ollama   | Performance varies | Highly dependent on local hardware* |
 
 \* Looking for community benchmarks on different hardware setups. Please submit your results via PR!
+
+## Structured Outputs
+
+All analysis results are returned as validated Pydantic models:
+
+```python
+from vision_analyzer import analyze_image_groq, ImageAnalysis
+
+# Pydantic model ensures consistent structure
+class ImageAnalysis(BaseModel):
+    description: str
+    key_points: List[str]
+    detected_objects: List[str]
+    detected_text: Optional[str] = None
+
+# Usage
+analysis: ImageAnalysis = analyze_image_groq("image.jpg", groq_client)
+print(f"Description: {analysis.description}")
+print(f"Objects: {analysis.detected_objects}")
+
+# JSON serialization included
+json_output = analysis.model_dump_json()
+```
+
+Benefits:
+- Type-safe outputs
+- Automatic validation
+- JSON serialization
+- IDE autocompletion
+- OpenAPI compatibility
 
 ## Key Features
 
