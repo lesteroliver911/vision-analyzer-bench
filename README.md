@@ -20,6 +20,16 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+## Performance Benchmarks
+
+| Provider | Average Response Time | Notes |
+|----------|---------------------|--------|
+| Groq     | < 3 seconds        | Fastest inference, consistent performance |
+| Gemini   | < 16 seconds       | Good balance of speed/quality |
+| Ollama   | Performance varies | Highly dependent on local hardware* |
+
+\* Looking for community benchmarks on different hardware setups. Please submit your results via PR!
+
 ## Key Features
 
 🚀 **Performance Metrics**
