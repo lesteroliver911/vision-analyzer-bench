@@ -61,7 +61,3 @@ print(f"Objects detected: {analysis.detected_objects}")
 ## License
 
 MIT
-
-## Support
-
-Join our [Discord community](https://discord.gg/visionanalyzer) for help and discussions.
